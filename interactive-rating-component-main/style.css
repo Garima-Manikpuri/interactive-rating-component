@@ -20,7 +20,7 @@ body{
 .box{
     margin: 25px 5px;
     width: 30%;
-    height: 300px;
+    height: 320px;
     border-radius: 10px;
     background-color: hsl(213, 19%, 18%) ;
     padding: 30px;
@@ -46,6 +46,7 @@ align-items: center;
 flex-direction: row;
 }
 .circle1{
+    cursor: pointer;
     width: 40px;
     height: 40px;
     /* margin: 10px 10px; */
@@ -57,7 +58,18 @@ flex-direction: row;
     background-color: hsl(216, 12%, 8%);
     color: hsl(217, 12%, 63%);
 }
+#btn:hover{
+    background-color: white;
+    color: black;
+}
+.circle1:hover{
+    
+    background-color: white;
+    color: black;
+}
+
 form button{
+    cursor: pointer;
     width: 100%;
     margin: 25px 15px 25px 4px;
     height: 40px;
@@ -65,6 +77,10 @@ form button{
     border-radius: 50px;
     border: none;
 
+}
+.dynamic{
+    background-color: hsl(25, 97%, 53%);
+    color: white;
 }
 button[type="submit"]{
     color: white;
@@ -79,11 +95,11 @@ button[type="submit"]{
 .hidebox{
     margin: 25px 5px;
     width: 30%;
-    height: 300px;
+    height: 320px;
     border-radius: 10px;
     background-color: hsl(213, 19%, 18%) ;
     padding: 30px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;

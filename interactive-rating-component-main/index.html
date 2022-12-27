@@ -1,62 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Interactive rating component</title>
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  
+
 </head>
+
 <body>
-<div class="container">
-  <!-- <div class="box">
-    <div class="inner-div">
-     
-      <img src="images/icon-star.svg" alt="icon">
-      <h1 class="heading">How did we do?</h1>
-      <p class="sub-heading">Please let us know how we did with your support request. All feedback is appreciated 
-        to help us improve our offering!
+  <div class="container">
+    <div class="box">
+      <div class="inner-div">
+
+        <img src="images/icon-star.svg" alt="icon">
+        <h1 class="heading">How did we do?</h1>
+        <p class="sub-heading">Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </p>
+        <div class="main-circle">
+          <span class="circle1">1</span>
+          <span class="circle1">2</span>
+          <span class="circle1">3</span>
+          <span class="circle1">4</span>
+          <span class="circle1">5</span>
+        </div>
+        <form action="#">
+          <button type="submit" id="btn" onclick="btn1()">SUBMIT</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="hidebox">
+      <img class="img2" src="images/illustration-thank-you.svg" alt="jnckz">
+      <div class="you">
+        <h3>You Selected <span id="rating">1</span> out of 5</h3>
+      </div>
+      <h1 id="thank">Thank you!</h1>
+      <p> We appreciate you taking the time to give a rating.<br> If you ever need more support,
+        don’t hesitate to get in touch!
       </p>
-      <div class="main-circle">
-      <span class="circle1">1</span>
-      <span class="circle1">2</span>
-      <span class="circle1">3</span>
-      <span  class="circle1">4</span>
-      <span  class="circle1">5</span>
     </div>
-      <form action="#">
-        <button type="submit">SUBMIT</button>
-      </form>
-
-    </div>
-  </div> -->
-  <div class="hidebox">
-    <img class="img2" src="images/illustration-thank-you.svg" alt="jnckz">
-    <div class="you"><h3>You Selected 4 out of 5</h3></div>
-    <h1 id="thank">Thank you!</h1>
-    <p> We appreciate you taking the time to give a rating.<br> If you ever need more support, 
-      don’t hesitate to get in touch!
-    </p>
   </div>
-</div>
-
-
-
- 
-
-
-
-  
-
- 
   <!-- Thank you state end -->
+  <script>
+    "Use strict"
+    var circle = document.querySelectorAll(".circle1");
+    var Ratings = document.getElementById("rating");
+    //console.log(circle[3].innerHTML)
+    let circle_value;
+    for (let i = 0; i < circle.length; i++) {
+      circle[i].addEventListener("click", () => {
+        
+          reset()
+          // circle[i].style.background = "hsl(25, 97%, 53%)"
+          circle[i].classList.add("dynamic")
+          Ratings.innerText=circle[i].innerText
+          // circle_value = circle[i].innerHTML
+          //console.log(circle_value)
+        
+      })
+    }
+    function reset() {
+      for (let i = 0; i < circle.length; i++) {
 
-  
-  
+        //circle[i].style.background = "transparent"
+        circle[i].classList.remove("dynamic")
+      }
+    }
+    let box = document.getElementsByClassName("box")
+    let hidebox = document.getElementsByClassName("hidebox")
+
+    let btn1 = () => {
+      hidebox[0].style.display = "flex"
+      box[0].style.display = "none"
+    }
+
+  </script>
 </body>
+
 </html>
