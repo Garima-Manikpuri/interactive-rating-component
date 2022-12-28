@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="images/favicon-32x32.png">
+
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="main">
+    <div class="container">
+      <div class="white-container">
+        <div class="container-box">
+          <div class="imgcontainer">
+
+            <img id="boxred" src="images/illustration-box-desktop.svg" alt="box">
+            <img id="wpic" src="images/illustration-woman-online-desktop.svg" alt="women">
+
+          </div>
+          <div class="textcontainer">
+            <!-- <img src="images/" alt=""> -->
+            <h1>FAQ</h1>
+            <p class="heading1">How many team members can I invite? <img src="images/icon-arrow-down.svg" alt="arrow"><i class="fa-solid fa-angle-up up-key"></i></p>
+            <div class="hidebox">
+              <p>You can invite up to 2 additional users on the Free plan. There is no limit on
+                team members for the Premium plan.</p>
+            </div>
+            <p class="heading1"> What is the maximum file upload size? <img src="images/icon-arrow-down.svg" alt=""><i
+                class="fa-solid fa-angle-up up-key"></i></p>
+            <div class="hidebox">
+              <p> No more than 2GB. All files in your account must fit your allotted storage space.</p>
+            </div>
+            <p class="heading1">How do I reset my password? <img src="images/icon-arrow-down.svg" alt="arrow"><i
+                class="fa-solid fa-angle-up up-key"></i></p>
+
+            <div class="hidebox">
+              <p> Click “Forgot password” from the login page or “Change password” from your profile page.
+                A reset link will be emailed to you.</p>
+            </div>
+            <p class="heading1">Can I cancel my subscription? <img src="images/icon-arrow-down.svg" alt="arrow"><i
+                class="fa-solid fa-angle-up up-key"></i></p>
+            <div class="hidebox">
+              <p> Yes! Send us a message and we’ll process your request no questions asked.
+              </p>
+            </div>
+            <p class="heading1"> Do you provide additional support? <img src="images/icon-arrow-down.svg" alt=""><i
+                class="fa-solid fa-angle-up up-key"></i></p>
+            <div class="hidebox">
+              <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const box1 = document.getElementsByClassName("heading1");
+    const box2 = document.getElementsByClassName("hidebox");
+    const arrowup = document.getElementsByTagName("i");
+    const arrowdown = document.querySelectorAll(".heading1 img");
+    // console.log(box1,box2,arrowup,arrowdown);
+let state=0;
+    for (let i = 0; i < box1.length; i++) {
+      
+      box1[i].addEventListener("click", () => {
+        if(state==0){
+          box2[i].style.display = "block";
+        arrowup[i].style.display="block";
+        arrowdown[i].style.display="none";
+        state = 1;
+      }else{
+        box2[i].style.display = "none";
+        arrowup[i].style.display="none";
+        arrowdown[i].style.display="block";
+        state = 0;
+      }
+
+// alert("jnmb");
+
+      })
+    }
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
