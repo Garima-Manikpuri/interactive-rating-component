@@ -1,0 +1,88 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+  height: 100vh;
+  width: 100%;
+  background-image: url('images/bg-intro-desktop.png');
+  background-color: hsl(0, 100%, 74%) ;
+}
+.inter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.text{
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    font-size: 20px;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: aliceblue;
+  padding-left: 95px;
+  padding-right: 95px;
+  line-height: 40px;
+  word-spacing: 5px;
+}
+.text p{
+    line-height:20px;
+    font-size: 13px;
+    margin-top:20px;
+    word-spacing: 1px;
+}
+.shiv{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    /* justify-content: center; */
+}
+.blue-heading{
+    height: 50px;
+    width: 65%;
+    border-radius: 5px;
+    background-color:hsl(248, 32%, 49%);
+    margin-top:80px;
+    margin-bottom:10px ;
+    color:white;
+    text-align: center;
+     line-height: 43px;
+     box-shadow: 0px 1.8px hsl(240, 57%, 72%);
+}
+.whiteback{
+    height: 370px;
+    width: 65%;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 2px hsl(240, 57%, 72%,200);
+}
+.whiteback input{
+    height: 40px;
+    width: 90%;
+    margin: 15px;
+    padding-left: 30px;
+}
+.whiteback button{
+    height: 40px;
+    width: 90%;
+    margin: 15px;
+    background-color: hsl(154, 59%, 51%);
+    border-radius: 8px;
+    color: white;
+}
+.whiteback p{
+    font-size: 10px;
+    color: hsl(246, 25%, 77%);
+    margin-left: 20px;
+    margin-top: -11px;
+}
